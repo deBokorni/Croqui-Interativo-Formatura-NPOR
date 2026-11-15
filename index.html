@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Croqui – Formatura NPOR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <button id="fechar" aria-label="Fechar e voltar ao croqui" title="Fechar (Esc)">&#10005;</button>
+
+  <svg id="salao" viewBox="0 0 1152 648" preserveAspectRatio="xMidYMid meet" role="img"
+       aria-label="Croqui do salão da formatura">
+    <rect id="fundo" x="0" y="0" width="1152" height="648" fill="transparent"></rect>
+
+    <!-- paredes (simétricas: 108 de cada lado) e rótulos centralizados -->
+    <g id="paredes">
+      <line x1="108" y1="0" x2="108" y2="648"></line>
+      <line x1="1044" y1="0" x2="1044" y2="648"></line>
+      <text x="54" y="324" transform="rotate(-90 54 324)" class="rotulo-parede">COZINHA / BUFFET</text>
+      <text x="1098" y="324" transform="rotate(-90 1098 324)" class="rotulo-parede">PISTA / PALCO</text>
+    </g>
+
+    <g id="mesas"></g>
+    <g id="cadeiras"></g>
+  </svg>
+
+  <div id="legenda">
+    <span><i style="background:#3f48cc"></i>Formandos (20)</span>
+    <span><i style="background:#22b14c"></i>Convidados dos alunos (8 por mesa)</span>
+    <span><i style="background:#ff7f27"></i>Instrução e convidados (8 por mesa)</span>
+    <span><i style="background:#ed1c24"></i>Autoridades do Batalhão (8 por mesa)</span>
+  </div>
+
+  <script src="dados.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
